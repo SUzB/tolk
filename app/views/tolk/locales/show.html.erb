@@ -15,7 +15,7 @@
 <div class="search">
   <% form_tag "/tolk/search", :method => :get do %>
     <%= hidden_field_tag :locale, @locale.name %>
-    Search for an English phrase:
+    Search for an <%= Tolk::Locale.primary_locale.language_name %> phrase:
     <%= text_field_tag :q, params[:q] %>
     <%= submit_tag "Search", :name => nil %>
   <% end %>
